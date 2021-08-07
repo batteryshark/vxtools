@@ -110,8 +110,12 @@ def create_snapshot(root_out_path=os.getcwd()):
                 g.write(f"[{key}]\n")
                 entries = get_vxreg_entry(key)
                 for entry in entries:
-                    g.write(entry)
-                    g.write("\n")
+                    try:
+                        g.write(entry)
+                        g.write("\n")
+                    except Exception as e:
+                        print("Failed to Write Entry:")
+                        print(entry)
                 
     print(f"Created Snapshot: {len(new_file_list)} Files and {len(new_registry_keys)} Registry Keys")
 
