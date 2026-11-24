@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Script output
+__staging/
+*.vxapp/
+baseline.json
+DATA/
+pdxreg.ini
+pdxenv.ini
+smoothie_addon.map
+vxregistry

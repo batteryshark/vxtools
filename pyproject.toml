@@ -1,0 +1,15 @@
+[project]
+name = "vxtools"
+version = "0.1.0"
+description = "Packaging scripts for the .vxapp format."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
